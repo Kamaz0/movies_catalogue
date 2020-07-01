@@ -1,5 +1,5 @@
 node_modules
-__pychache__
+__pycache__
 **/templates/index_backup.html
 main_backup
 movies_env
