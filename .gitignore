@@ -3,3 +3,4 @@ __pycache__
 **/templates/index_backup.html
 main_backup
 movies_env
+**/templates/movie_details_backup.html
