@@ -1,17 +1,17 @@
 import requests
 
-# def get_movies(how_many):
-#     data = get_popular_movies()
-#     return data["results"][:8]
+def get_movies(how_many, list_type="popular"):
+    data = get_movies_list(list_type)
+    return data["results"][:8]
 
-def get_popular_movies():
-    endpoint = "https://api.themoviedb.org/3/movie/popular"
-    api_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YjAyZjQzYjk2OWVlNDA0MzlmZWRiNGVjYTg4MDY2MCIsInN1YiI6IjVlZjFmYWE4OWE4YThhMDAzNWIzM2JiNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6N3KWEo00EXD6NuRFb4qA0Jgk7s5KpJVhhvtv39jjhE"
-    headers = {
-        "Authorization": f"Bearer {api_token}"
-    }
-    response = requests.get(endpoint, headers=headers)
-    return response.json()
+# def get_popular_movies():
+#     endpoint = "https://api.themoviedb.org/3/movie/popular"
+#     api_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YjAyZjQzYjk2OWVlNDA0MzlmZWRiNGVjYTg4MDY2MCIsInN1YiI6IjVlZjFmYWE4OWE4YThhMDAzNWIzM2JiNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6N3KWEo00EXD6NuRFb4qA0Jgk7s5KpJVhhvtv39jjhE"
+#     headers = {
+#         "Authorization": f"Bearer {api_token}"
+#     }
+#     response = requests.get(endpoint, headers=headers)
+#     return response.json()
 
 def get_movies_list(list_type):
     endpoint = f"https://api.themoviedb.org/3/movie/{list_type}"
