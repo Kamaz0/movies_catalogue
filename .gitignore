@@ -4,3 +4,4 @@ __pycache__
 main_backup
 movies_env
 **/templates/movie_details_backup.html
+**/tests
